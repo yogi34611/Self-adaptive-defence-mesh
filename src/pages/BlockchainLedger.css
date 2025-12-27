@@ -1,0 +1,112 @@
+.blockchain-ledger {
+  padding: 2rem;
+}
+
+.consensus-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.consensus-card {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1229 100%);
+  border: 2px solid #ffaa00;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(255, 170, 0, 0.1);
+}
+
+.consensus-label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.consensus-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffaa00;
+}
+
+.blockchain-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blockchain-table thead {
+  background: rgba(255, 170, 0, 0.1);
+}
+
+.blockchain-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #ffaa00;
+  border-bottom: 2px solid #ffaa00;
+}
+
+.blockchain-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blockchain-table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.blockchain-table tbody tr:hover {
+  background: rgba(255, 170, 0, 0.05);
+}
+
+.block-number {
+  font-weight: 700;
+  color: #00ffff;
+  font-size: 1.1rem;
+}
+
+.threat-hash {
+  font-family: 'Courier New', monospace;
+  color: #888;
+  font-size: 0.85rem;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.verified-badge {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .blockchain-ledger {
+    padding: 1rem;
+  }
+
+  .consensus-info {
+    grid-template-columns: 1fr;
+  }
+
+  .blockchain-table {
+    font-size: 0.85rem;
+  }
+
+  .blockchain-table th,
+  .blockchain-table td {
+    padding: 0.7rem 0.5rem;
+  }
+
+  .threat-hash {
+    max-width: 150px;
+  }
+}

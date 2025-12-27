@@ -1,0 +1,152 @@
+.app {
+  min-height: 100vh;
+  background: #0a0e27;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background: linear-gradient(180deg, #0a0e27 0%, #050812 100%);
+}
+
+/* Common styles for all pages */
+.page-title {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.content-card {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1229 100%);
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.threats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.threats-table thead {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.threats-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+.threats-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.threats-table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.threats-table tbody tr:hover {
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.ip-address {
+  font-family: 'Courier New', monospace;
+  color: #ffaa00;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.severity-high {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.severity-medium {
+  background: rgba(255, 170, 0, 0.2);
+  color: #ffaa00;
+  border: 1px solid #ffaa00;
+}
+
+.severity-low {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
+.status-blocked {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.status-isolated {
+  background: rgba(255, 170, 0, 0.2);
+  color: #ffaa00;
+  border: 1px solid #ffaa00;
+}
+
+.status-monitoring {
+  background: rgba(0, 204, 255, 0.2);
+  color: #00ccff;
+  border: 1px solid #00ccff;
+}
+
+/* Scrollbar styling */
+.main-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-body {
+    flex-direction: column;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 300px);
+  }
+}

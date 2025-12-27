@@ -1,0 +1,200 @@
+.dashboard {
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1229 100%);
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+}
+
+.stat-card.total {
+  border-color: #00ffff;
+}
+
+.stat-card.high {
+  border-color: #ff4444;
+}
+
+.stat-card.medium {
+  border-color: #ffaa00;
+}
+
+.stat-card.low {
+  border-color: #00ff88;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-content h3 {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffff;
+}
+
+.threats-section {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1229 100%);
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: #00ffff;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.live-indicator {
+  font-size: 0.9rem;
+  color: #ff4444;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.threats-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.threats-table thead {
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.threats-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+.threats-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.threats-table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.threats-table tbody tr:hover {
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.ip-address {
+  font-family: 'Courier New', monospace;
+  color: #ffaa00;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.severity-high {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.severity-medium {
+  background: rgba(255, 170, 0, 0.2);
+  color: #ffaa00;
+  border: 1px solid #ffaa00;
+}
+
+.severity-low {
+  background: rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
+.status-blocked {
+  background: rgba(255, 68, 68, 0.2);
+  color: #ff4444;
+  border: 1px solid #ff4444;
+}
+
+.status-isolated {
+  background: rgba(255, 170, 0, 0.2);
+  color: #ffaa00;
+  border: 1px solid #ffaa00;
+}
+
+.status-monitoring {
+  background: rgba(0, 204, 255, 0.2);
+  color: #00ccff;
+  border: 1px solid #00ccff;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threats-table {
+    font-size: 0.85rem;
+  }
+
+  .threats-table th,
+  .threats-table td {
+    padding: 0.7rem 0.5rem;
+  }
+}

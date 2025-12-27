@@ -1,0 +1,68 @@
+.threat-history {
+  padding: 2rem;
+}
+
+.content-card {
+  background: linear-gradient(135deg, #1a1f3a 0%, #0f1229 100%);
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-input,
+.severity-filter {
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-input:focus,
+.severity-filter:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.severity-filter {
+  min-width: 180px;
+}
+
+.results-info {
+  color: #aaa;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .threat-history {
+    padding: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
